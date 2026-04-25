@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title>WishStar League</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <h2>WishStar</h2>
+  <ul>
+    <li onclick="showPage('home')">🏠 首頁</li>
+    <li onclick="showPage('post')">📄 文章專區</li>
+    <li onclick="showPage('work')">📊 工作紀錄</li>
+  </ul>
+</div>
+
+<!-- Main -->
+<div class="main">
+
+  <!-- Header -->
+  <div class="header">
+    <div>WishStar League</div>
+    <div id="userInfo">SHMIN ▼</div>
+  </div>
+
+  <!-- Home -->
+  <div id="homePage" class="page">
+
+    <h2>歡迎回來，SHMIN</h2>
+    <p>今天也是閃耀的一天 ✨</p>
+
+    <!-- 卡片 -->
+    <div class="cards">
+      <div class="card">📢 公告<br><span id="count1">0</span></div>
+      <div class="card">📋 工作要點</div>
+      <div class="card">💡 銷售技巧</div>
+      <div class="card">📦 商品資訊</div>
+      <div class="card">🎓 教育訓練</div>
+    </div>
+
+    <!-- 最新文章 -->
+    <div class="box">
+      <h3>最新文章</h3>
+      <div id="postList"></div>
+    </div>
+
+  </div>
+
+  <!-- 文章頁 -->
+  <div id="postPage" class="page hidden">
+
+    <h2>文章專區</h2>
+
+    <input id="title" placeholder="標題">
+    <input id="content" placeholder="內容">
+    <button onclick="addPost()">發佈</button>
+
+    <div id="allPosts"></div>
+
+  </div>
+
+  <!-- 工作頁 -->
+  <div id="workPage" class="page hidden">
+
+    <h2>工作紀錄</h2>
+
+    <input id="workInput" placeholder="今天做了什麼">
+    <button onclick="addWork()">新增</button>
+
+    <div id="workList"></div>
+
+  </div>
+
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
