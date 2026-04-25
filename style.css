@@ -1,26 +1,35 @@
 body {
   margin:0;
   font-family: Arial;
-  display:flex;
   background:#FFFBEB;
+}
+
+.layout {
+  display:flex;
 }
 
 /* Sidebar */
 .sidebar {
   width:220px;
-  background:#f5f5f5;
+  background:#f8fafc;
   height:100vh;
   padding:20px;
+  border-right:1px solid #ddd;
 }
 
-.sidebar ul {
-  list-style:none;
-  padding:0;
+.sidebar h2 {
+  margin-bottom:20px;
 }
 
 .sidebar li {
+  list-style:none;
   padding:10px;
   cursor:pointer;
+  border-radius:8px;
+}
+
+.sidebar li:hover {
+  background:#e2e8f0;
 }
 
 /* Main */
@@ -28,6 +37,7 @@ body {
   flex:1;
 }
 
+/* Header */
 .header {
   background:#14B8A6;
   color:white;
@@ -48,22 +58,37 @@ body {
 /* 卡片 */
 .cards {
   display:flex;
-  gap:10px;
+  gap:15px;
   margin:20px 0;
 }
 
 .card {
   background:white;
   padding:20px;
-  border-radius:10px;
+  border-radius:12px;
   width:120px;
   text-align:center;
-  box-shadow:0 2px 10px rgba(0,0,0,0.1);
+  box-shadow:0 4px 15px rgba(0,0,0,0.08);
 }
 
 /* box */
 .box {
   background:white;
-  padding:15px;
-  border-radius:10px;
+  padding:20px;
+  border-radius:12px;
+}
+
+/* input */
+input {
+  padding:10px;
+  margin:5px;
+}
+
+button {
+  background:#F97316;
+  color:white;
+  border:none;
+  padding:10px;
+  border-radius:8px;
+  cursor:pointer;
 }
